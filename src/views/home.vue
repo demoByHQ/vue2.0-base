@@ -11,10 +11,6 @@
         HR
       </div>
 
-      <group>
-        <x-input title="手机号码格式化"  v-model="maskValue" :max="13" is-type="china-mobile"></x-input>
-      </group>
-
       <grid :cols="4">
         <grid-item v-for="(menu,index) in quickMenuList.quickMenus" :key="index" @on-item-click="goTarget(menu)">
           <img v-if="menu.img" slot="icon" :src="menu.img">
@@ -24,13 +20,18 @@
       </grid>
     </div>
 
-    <p ref="msg">{{msg}}</p>
+
+    <!-- <group>
+      <x-input title="手机号码格式化"  v-model="maskValue" :max="13" is-type="china-mobile"></x-input>
+    </group>
 
     <group>
       <x-input title="title" v-model="message"></x-input>
     </group>
 
-    <button @click="test">翻译</button>
+    <p ref="msg">{{msg}}</p>
+
+    <button @click="test">翻译</button> -->
 
   </div>
 </template>
